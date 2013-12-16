@@ -42,6 +42,10 @@
             this.btn_1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_dialer = new System.Windows.Forms.Panel();
+            this.lbl_title = new System.Windows.Forms.Label();
+            this.txt_line1 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.pnl_dialer.SuspendLayout();
             this.SuspendLayout();
@@ -210,9 +214,9 @@
             this.btn_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(167)))), ((int)(((byte)(178)))));
-            this.btn_1.Location = new System.Drawing.Point(-3, 2);
+            this.btn_1.Location = new System.Drawing.Point(-2, 2);
             this.btn_1.Name = "btn_1";
-            this.btn_1.Size = new System.Drawing.Size(83, 53);
+            this.btn_1.Size = new System.Drawing.Size(83, 54);
             this.btn_1.TabIndex = 13;
             this.btn_1.Text = "1";
             this.btn_1.UseVisualStyleBackColor = true;
@@ -220,18 +224,21 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_line1);
             this.panel1.Controls.Add(this.pnl_dialer);
             this.panel1.Location = new System.Drawing.Point(3, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(244, 266);
+            this.panel1.Size = new System.Drawing.Size(244, 295);
             this.panel1.TabIndex = 25;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pnl_dialer
             // 
+            this.pnl_dialer.Controls.Add(this.btn_2);
             this.pnl_dialer.Controls.Add(this.btn_1);
             this.pnl_dialer.Controls.Add(this.brn_settings);
-            this.pnl_dialer.Controls.Add(this.btn_2);
             this.pnl_dialer.Controls.Add(this.btn_0);
             this.pnl_dialer.Controls.Add(this.btn_3);
             this.pnl_dialer.Controls.Add(this.button11);
@@ -241,18 +248,61 @@
             this.pnl_dialer.Controls.Add(this.btn_8);
             this.pnl_dialer.Controls.Add(this.btn_6);
             this.pnl_dialer.Controls.Add(this.btn_7);
-            this.pnl_dialer.Location = new System.Drawing.Point(3, 58);
+            this.pnl_dialer.Location = new System.Drawing.Point(2, 88);
             this.pnl_dialer.Name = "pnl_dialer";
             this.pnl_dialer.Size = new System.Drawing.Size(241, 213);
             this.pnl_dialer.TabIndex = 27;
             this.pnl_dialer.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // lbl_title
+            // 
+            this.lbl_title.AutoSize = true;
+            this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title.ForeColor = System.Drawing.Color.White;
+            this.lbl_title.Location = new System.Drawing.Point(5, 11);
+            this.lbl_title.Name = "lbl_title";
+            this.lbl_title.Size = new System.Drawing.Size(124, 13);
+            this.lbl_title.TabIndex = 26;
+            this.lbl_title.Text = "Inkomende oproep...";
+            // 
+            // txt_line1
+            // 
+            this.txt_line1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_line1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_line1.Location = new System.Drawing.Point(4, 4);
+            this.txt_line1.Name = "txt_line1";
+            this.txt_line1.Size = new System.Drawing.Size(240, 25);
+            this.txt_line1.TabIndex = 28;
+            this.txt_line1.Text = "Mevr. Gries Jansen";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(4, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(240, 21);
+            this.textBox1.TabIndex = 29;
+            this.textBox1.Text = "+31 (0)30 8893482";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(3, 52);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(240, 21);
+            this.textBox2.TabIndex = 30;
+            this.textBox2.Text = "Dossier aanwezig:      JA ";
             // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(58)))), ((int)(((byte)(69)))));
-            this.ClientSize = new System.Drawing.Size(250, 299);
+            this.ClientSize = new System.Drawing.Size(250, 329);
+            this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_main";
@@ -260,8 +310,10 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frm_main_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.pnl_dialer.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -281,6 +333,10 @@
         private System.Windows.Forms.Button btn_1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_dialer;
+        private System.Windows.Forms.Label lbl_title;
+        private System.Windows.Forms.TextBox txt_line1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
 
 
 
